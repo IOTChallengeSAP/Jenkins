@@ -47,7 +47,7 @@ node() {
                                                          ConfigurationLoader.stepConfiguration(this, STEP_CONFIG_NEO_DEPLOY), (Set)['neoHome', 'account'],
                                                          ConfigurationLoader.defaultStepConfiguration(this, 'neoDeploy'))
       mtaBuildConfiguration = ConfigurationMerger.merge([:], (Set)[],
-                                                        ConfigurationLoader.stepConfiguration(this, STEP_CONFIG_MTA_BUILD), (Set)['mtaJarLocation'],
+                                                     //   ConfigurationLoader.stepConfiguration(this, STEP_CONFIG_MTA_BUILD), (Set)['mtaJarLocation'],
                                                         ConfigurationLoader.defaultStepConfiguration(this, 'mtaBuild'))
     }
     echo "VOR MTA_BUILD"
