@@ -15,8 +15,8 @@ import com.sap.piper.ConfigurationMerger
 
 @Library('piper-lib-os') _
 
-CONFIG_FILE_PROPERTIES = '.pipeline/config.properties'
-CONFIG_FILE_YML = '.pipeline/config.yml'
+CONFIG_FILE_PROPERTIES = 'x.pipeline/config.properties'
+CONFIG_FILE_YML = 'x.pipeline/config.yml'
 
 node() {
   //Global variables:
