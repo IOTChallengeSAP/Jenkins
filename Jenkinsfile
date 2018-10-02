@@ -13,7 +13,7 @@ import com.sap.piper.ConfigurationMerger
  *	license agreement you entered into with SAP.
 */
 
-@Library('piper-lib') _
+@Library('piper-lib-os') _
 
 CONFIG_FILE_PROPERTIES = '.pipeline/config.properties'
 CONFIG_FILE_YML = '.pipeline/config.yml'
