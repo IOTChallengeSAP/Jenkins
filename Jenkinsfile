@@ -47,11 +47,11 @@ node() {
                                                          ConfigurationLoader.stepConfiguration(this, STEP_CONFIG_NEO_DEPLOY), (Set)['neoHome', 'account'],
                                                          ConfigurationLoader.defaultStepConfiguration(this, 'neoDeploy'))
       mtaBuildConfiguration = ConfigurationMerger.merge([:], (Set)[],
-                                                     //   ConfigurationLoader.stepConfiguration(this, STEP_CONFIG_MTA_BUILD), (Set)['mtaJarLocation'],
+                                                        ConfigurationLoader.stepConfiguration(this, STEP_CONFIG_MTA_BUILD), (Set)['mtaJarLocation'],
                                                         ConfigurationLoader.defaultStepConfiguration(this, 'mtaBuild'))
     }
     echo "VOR MTA_BUILD"
-    MTA_JAR_LOCATION = mtaBuildConfiguration.mtaJarLocation ?: commonPipelineEnvironment.getConfigProperty('MTA_HOME')
+    MTA_JAR_LOCATION = commonPipelineEnvironment.getConfigProperty('MTA_HOME')
     echo "MTA Jar Location: ${MTA_JAR_LOCATION}"
     NEO_HOME = neoDeployConfiguration.neoHome ?: commonPipelineEnvironment.getConfigProperty('NEO_HOME')
     proxy = commonPipelineEnvironment.getConfigProperty('proxy') ?: ''
